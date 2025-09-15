@@ -6,6 +6,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install`
+
+Open Terminal (cmd/powershell, etc.)
+Go to Groovo directory by typing cd Groovo
+Run npm install
+
+
 ### `npm start`
 
 Runs the app in the development mode.\
