@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { MoodEntry, PlaylistRecommendation } from '../types';
 
-const API_BASE_URL = 'https://localhost:7188/api';
+const API_BASE_URL = 'https://localhost:7078/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
