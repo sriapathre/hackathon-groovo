@@ -4,7 +4,7 @@ This app enables users to log their daily mood using emoji-based options and pro
 
 To clone the GitHub repository you linked, follow these steps:
 
-🧭 Instructions to Clone the Repository
+## 🧭 Instructions to Clone the Repository
 
 Open your terminal (Command Prompt, PowerShell, or Git Bash on Windows; Terminal on macOS/Linux).
 
@@ -13,7 +13,7 @@ Run the following command:
 git clone https://github.com/sriapathre/hackathon-groovo.git 
 
 
-Create a Pull Request
+## Create a Pull Request
 
 Go to the repository on GitHub: https://github.com/sriapathre/hackathon-groovo
 You’ll see a prompt to compare & pull request for your newly pushed branch.
