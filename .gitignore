@@ -1,5 +1,0 @@
-# Ignore build output folders
-obj/
-bin/
-Debug/
-debug/
