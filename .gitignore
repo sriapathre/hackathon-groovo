@@ -55,6 +55,8 @@ publish/
 # Ignore build output folders
 backend/bin/
 backend/obj/
+**/bin/*
+**/obj/*
 
 # Ignore node modules
 node_modules/
