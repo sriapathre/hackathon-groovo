@@ -1,0 +1,60 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# DotCover
+*.dotCover
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# Npm
+node_modules/
+
+# Others
+*.db
+*.DS_Store
+*.pdb
+
+# Environment files
+.env
+.env.*
+
+# Test results
+TestResults/
+*.TestResults/
+
+# Publish
+publish/
+# Ignore Visual Studio folder
+.vs/
+
+# Ignore build output folders
+backend/bin/
+backend/obj/
+
+# Ignore node modules
+node_modules/
