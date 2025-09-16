@@ -163,7 +163,19 @@ function App() {
             )}
           </>
         )}
-        {activeTab === "picture" && <MoodFinder />}
+
+        {activeTab === "picture" && (
+          <div>
+            <MoodFinder onMoodSelect={handleMoodSelect} />
+            {currentMood && (
+              <PlaylistDisplay
+                playlists={playlists}
+                mood={currentMood}
+                loading={loadingPlaylists}
+              />
+            )}
+          </div>
+        )}
 
         {activeTab === "history" && (
           <MoodHistory entries={moodHistory} loading={loadingHistory} />

@@ -1,25 +1,14 @@
-import React, { useState } from 'react';
-import { MoodOption } from '../types';
+import React, { useState } from "react";
+import { MoodOption, MOOD_OPTIONS } from "../types";
 
 interface MoodSelectorProps {
   onMoodSelect: (mood: MoodOption, energyLevel: number, notes: string) => void;
 }
 
-const MOOD_OPTIONS: MoodOption[] = [
-  { emoji: '😊', name: 'Happy', value: 'happy' },
-  { emoji: '😢', name: 'Sad', value: 'sad' },
-  { emoji: '⚡', name: 'Energetic', value: 'energetic' },
-  { emoji: '😌', name: 'Calm', value: 'calm' },
-  { emoji: '😰', name: 'Anxious', value: 'anxious' },
-  { emoji: '😴', name: 'Tired', value: 'calm' },
-  { emoji: '😤', name: 'Frustrated', value: 'energetic' },
-  { emoji: '💝', name: 'Loved', value: 'happy' },
-];
-
 const MoodSelector: React.FC<MoodSelectorProps> = ({ onMoodSelect }) => {
   const [selectedMood, setSelectedMood] = useState<MoodOption | null>(null);
   const [energyLevel, setEnergyLevel] = useState(3);
-  const [notes, setNotes] = useState('');
+  const [notes, setNotes] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -31,14 +20,16 @@ const MoodSelector: React.FC<MoodSelectorProps> = ({ onMoodSelect }) => {
   return (
     <div className="mood-selector">
       <h2>How are you feeling today? 🌟</h2>
-      
+
       <form onSubmit={handleSubmit}>
         <div className="mood-grid">
           {MOOD_OPTIONS.map((mood) => (
             <button
               key={mood.value}
               type="button"
-              className={`mood-option ${selectedMood?.value === mood.value ? 'selected' : ''}`}
+              className={`mood-option ${
+                selectedMood?.value === mood.value ? "selected" : ""
+              }`}
               onClick={() => setSelectedMood(mood)}
             >
               <span className="emoji">{mood.emoji}</span>
@@ -72,9 +63,8 @@ const MoodSelector: React.FC<MoodSelectorProps> = ({ onMoodSelect }) => {
                 rows={3}
               />
             </div>
-
             <button type="submit" className="submit-btn">
-              Log My Mood 📝
+              Set My Mood 📝
             </button>
           </div>
         )}

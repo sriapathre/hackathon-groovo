@@ -1,5 +1,5 @@
-import React from 'react';
-import { PlaylistRecommendation } from '../types';
+import React from "react";
+import { PlaylistRecommendation } from "../types";
 
 interface PlaylistDisplayProps {
   playlists: PlaylistRecommendation[];
@@ -7,9 +7,13 @@ interface PlaylistDisplayProps {
   loading: boolean;
 }
 
-const PlaylistDisplay: React.FC<PlaylistDisplayProps> = ({ playlists, mood, loading }) => {
+const PlaylistDisplay: React.FC<PlaylistDisplayProps> = ({
+  playlists,
+  mood,
+  loading,
+}) => {
   const openSpotify = (uri: string) => {
-    window.open(uri, '_blank');
+    window.open(uri, "_blank");
   };
 
   if (loading) {
@@ -29,17 +33,19 @@ const PlaylistDisplay: React.FC<PlaylistDisplayProps> = ({ playlists, mood, load
     );
   }
 
+  console.log(playlists);
   return (
     <div className="playlist-display">
       <h3>🎵 Playlists for your {mood} mood</h3>
       <div className="playlists-grid">
         {playlists.map((playlist, index) => (
           <div key={index} className="playlist-card">
-            <img 
-              src={playlist.imageUrl} 
+            <img
+              src={playlist.imageUrl}
               alt={playlist.name}
               onError={(e) => {
-                (e.target as HTMLImageElement).src = 'https://via.placeholder.com/200x200?text=🎵';
+                (e.target as HTMLImageElement).src =
+                  "https://via.placeholder.com/200x200?text=🎵";
               }}
             />
             <div className="playlist-info">
@@ -52,7 +58,7 @@ const PlaylistDisplay: React.FC<PlaylistDisplayProps> = ({ playlists, mood, load
                   </span>
                 ))}
               </div>
-              <button 
+              <button
                 className="open-spotify-btn"
                 onClick={() => openSpotify(playlist.spotifyUri)}
               >
