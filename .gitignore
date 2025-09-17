@@ -39,10 +39,6 @@ node_modules/
 *.DS_Store
 *.pdb
 
-# Environment files
-.env
-.env.*
-
 # Test results
 TestResults/
 *.TestResults/
