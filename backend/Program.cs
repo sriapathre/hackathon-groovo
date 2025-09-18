@@ -17,9 +17,12 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("http://localhost:3000")
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        policy.WithOrigins(
+            "http://localhost:3000",
+            "https://groovo.azurewebsites.net" // Add your deployed frontend domain here
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod();
     });
 });
 
